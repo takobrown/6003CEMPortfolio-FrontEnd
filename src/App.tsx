@@ -1,10 +1,11 @@
 //import './App.css'
 import 'antd/dist/reset.css';
-import { Card, Button, DatePicker } from 'antd';
-import Hello from './components/Hello';
-import Goodbye from './components/Goodbye';
+//import { Card, Button, DatePicker } from 'antd';
+//import Hello from './components/Hello';
+//import Goodbye from './components/Goodbye';
+import Grid from "./components/Grid"
 
-let counter = 0;
+/*let counter = 0;
 
 const onChange : DatePicker ['onChange'] = (date, datestring) => {
   console.log(date, datestring);
@@ -31,4 +32,14 @@ export default function App() {
       <Goodbye name="Dummy" />
     </div>
   )
+}*/
+
+
+export default function App() {
+  return (
+    <>
+      <Grid />
+    </>
+  )
+  
 }
