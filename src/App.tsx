@@ -1,45 +1,43 @@
 //import './App.css'
 import 'antd/dist/reset.css';
 //import { Card, Button, DatePicker } from 'antd';
-//import Hello from './components/Hello';
-//import Goodbye from './components/Goodbye';
-import Grid from "./components/Grid"
+import { Layout, Space } from 'antd';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'; 
+import Home from './components/Home';
+import Dashboard from './components/Dashboard';
+import About from './components/About';
+import CatsDetail from './components/CatsDetail';
+import NewCats from './components/NewCats';
 
-/*let counter = 0;
 
-const onChange : DatePicker ['onChange'] = (date, datestring) => {
-  console.log(date, datestring);
-}
-
-const onClick = (event: any) => {
-  console.log(counter++)
-}
+const { Header, Content, Footer } = Layout;
 
 export default function App() {
   return (
-    <div>
-      <Hello name="Banana"/>
-      <Card title="Default card" style={{ width: 300 }}>
-        <p>Content 1</p>
-        <p>Content 2</p>
-        <p>Content 3</p>
-      </Card>
-      <br />
-      <Button type="primary" onClick = {onClick}>Button</Button>
-      <Button type="primary" danger>Button</Button>
-      <br />
-      <DatePicker onChange = {onChange} />
-      <Goodbye name="Dummy" />
-    </div>
-  )
-}*/
-
-
-export default function App() {
-  return (
-    <>
-      <Grid />
-    </>
+    <Router>
+      <Header>
+        <nav>
+          <Space>
+            <Link to ="/">Home</Link>
+            <Link to ="/dashboard">Dashboard</Link>
+           <Link to ="/about">About</Link>
+            <Link to ="/newcats">New Cats</Link>
+          </Space>
+        </nav>
+      </Header>
+      <Content>
+        <Routes>
+          <Route index element = { <Home />} />
+          <Route path = "/dashboard" element = { <Dashboard />} />
+          <Route path = "/about" element = { <About />} />
+          <Route path = "/a/:aid" element = { <CatsDetail />} />
+          <Route path = "/newcats" element = { <NewCats />} />
+        </Routes>
+      </Content>
+      <Footer>
+        <p>@Copyright Reserved The Pet Shelter</p>
+      </Footer>
+    </Router>
   )
   
 }

@@ -21,6 +21,10 @@
     "vite": "^3.0.4"
   },
   "dependencies": {
-    "antd": "^5.5.1"
+    "@types/node": "^20.2.4",
+    "antd": "^5.5.1",
+    "axios": "^1.4.0",
+    "buffer": "^6.0.3",
+    "react-router-dom": "^6.11.2"
   }
 }
